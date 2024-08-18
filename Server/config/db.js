@@ -11,7 +11,9 @@ const connectDB= async()=>{
         });
     }catch(error){
         console.error('Connection error:', error);
+        process.exit(1);
     }
 };
+module.exports= connectDB;
 
 
